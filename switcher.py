@@ -13,7 +13,7 @@ REQUIREMENTS
 import pygetwindow as gw
 import json
 import os
-from messenger import show_message
+from messenger import Messenger
 
 class Switcher:
 
@@ -43,21 +43,25 @@ class Switcher:
 
         if os.path.exists(self.SETTINGS_FILE) and os.path.isfile(self.SETTINGS_FILE):
             if os.stat().st_size(self.SETTINGS_FILE) == 0:
-                show_message("No settings in the settings.json file. Please Update", "WARNING")
+                Messenger.show_message("No settings in the settings.json file. Please Update", "WARNING")
                 return
         else:
             with open(self.SETTINGS_FILE, 'w+') as writer:
                 writer.write(self.SETTINGS_CONTENT)
             
-            show_message("settings file created, please populate the file with settings", "INFO")
+            Messenger.show_message("settings file created, please populate the file with settings", "INFO")
         
 
     def retrieve_settings(self):
         settings = ""
-    
-        with open(self.SETTINGS_FILE, 'r') as reader:
-            settings = json.load(reader)
-    
+
+        if os.path.exists(self.SETTINGS_FILE) and os.path.isfile(self.SETTINGS_FILE):
+            if not os.stat().st_size(self.SETTINGS_FILE) == 0:
+                with open(self.SETTINGS_FILE, 'r') as reader:
+                    settings = json.load(reader)
+        else:
+            self.create_settings_file()
+             
         self.bg_window_title = settings['background_window_title']
         self.fg_window_title = settings['foreground_window_title']
 
@@ -85,7 +89,6 @@ class Switcher:
 
     def click_at_coordinate(self):
         self.btn_coordinate = "coordinate"
-    
 
 
 if __name__ == '__main__':
