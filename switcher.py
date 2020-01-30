@@ -48,6 +48,8 @@ class Switcher:
             if os.stat().st_size(self.SETTINGS_FILE) == 0:
                 Messenger.show_message("No settings in the settings.json file. Please Update", "WARNING")
                 return
+            else:
+                Messenger.show_message("Check for the proper settings in the settings.json file, otherwise ignore this message", "INFO")
         else:
             with open(self.SETTINGS_FILE, 'w+') as writer:
                 writer.write(self.SETTINGS_CONTENT)
