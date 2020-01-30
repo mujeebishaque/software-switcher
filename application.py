@@ -1,5 +1,3 @@
-
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -44,9 +42,6 @@ class Ui_MainWindow(object):
         self.groupBox.setObjectName("groupBox")
         self.groupBox_2 = QtWidgets.QGroupBox(self.groupBox)
         self.groupBox_2.setGeometry(QtCore.QRect(40, 30, 230, 130))
-        self.groupBox_2.setStyleSheet("border-color: rgb(135, 49, 255);\n"
-"selection-color: rgb(135, 49, 255);\n"
-"selection-background-color: rgb(135, 49, 255);")
         self.groupBox_2.setObjectName("groupBox_2")
         self.start_btn = QtWidgets.QPushButton(self.groupBox_2)
         self.start_btn.setGeometry(QtCore.QRect(50, 30, 130, 30))
