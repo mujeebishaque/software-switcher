@@ -24,7 +24,9 @@ class Switcher:
         "foreground_path": "",
 
         "background_window_title": "",
-        "foreground_window_title": ""
+        "foreground_window_title": "",
+
+        "reports_folder_path": ""
     }
     '''
 
@@ -33,8 +35,9 @@ class Switcher:
 
     def __init__(self):
     
-        self.bg_window_title = None
-        self.fg_window_title = None
+        self.bg_window_title     = None
+        self.fg_window_title     = None
+        self.reports_folder_path = None
 
         self.retrieve_settings()
         self.starter()
@@ -67,6 +70,7 @@ class Switcher:
 
         self.background_window_url = settings['background_path']
         self.foreground_window_url = settings['foreground_path']
+        self.reports_folder_path   = settings['reports_folder_path']
 
     def starter(self):
         # work with subprocess
