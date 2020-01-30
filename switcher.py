@@ -30,15 +30,12 @@ class Switcher:
 
     background_window_url = None
     foreground_window_url = None
-
-    def __init__(self):
     
-        self.bg_window_title     = None
-        self.fg_window_title     = None
-        self.reports_folder_path = None
-
-        # self.retrieve_settings()
-        # self.starter()
+    bg_window_title       = None
+    fg_window_title       = None
+    
+    reports_folder_path   = None
+    
 
     def create_settings_file(self):
 
