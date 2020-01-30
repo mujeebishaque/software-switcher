@@ -7,7 +7,8 @@ import sys
 class Ui_MainWindow(object):
     
     def __init__(self):
-        pass
+        self.switcher = Switcher()
+
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -98,12 +99,17 @@ class Ui_MainWindow(object):
         self.check_settings_btn.setText(_translate("MainWindow", "Check Settings"))
         self.reports_folder_btn.setText(_translate("MainWindow", "Reports Folder"))
 
+    def start_application(self):
+        self.switcher.starter()
+
+    def open_reports_folder(self):
+        pass
+
     def exit_application(self):
         sys.exit()
 
     def check_settings(self):
-        switcher = Switcher()
-        switcher.retrieve_settings()
+        self.switcher.retrieve_settings()
 
 
 if __name__ == "__main__":
