@@ -72,8 +72,8 @@ class Switcher:
         # work with subprocess
         import subprocess
 
-        subprocess.run(['start', str(self.background_window_url)])
-        subprocess.run(['start', str(self.foreground_window_url)])
+        subprocess.call([str(self.background_window_url)])
+        subprocess.call([str(self.foreground_window_url)])
 
     def is_window_available(self):
         '''
