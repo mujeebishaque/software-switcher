@@ -1,7 +1,14 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
 
+from PyQt5 import QtCore, QtGui, QtWidgets
+from messenger import Messenger
+from switcher import Switcher
+import sys
 
 class Ui_MainWindow(object):
+    
+    def __init__(self):
+        pass
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(742, 371)
@@ -66,6 +73,12 @@ class Ui_MainWindow(object):
         self.line.setObjectName("line")
         MainWindow.setCentralWidget(self.centralwidget)
 
+        # linking buttons to connnects
+
+        self.exit_btn.clicked.connect(self.exit_application)
+
+        # linking ends here
+
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -82,6 +95,9 @@ class Ui_MainWindow(object):
         self.groupBox_3.setTitle(_translate("MainWindow", "Misc."))
         self.check_settings_btn.setText(_translate("MainWindow", "Check Settings"))
         self.reports_folder_btn.setText(_translate("MainWindow", "Reports Folder"))
+
+    def exit_application(self):
+        sys.exit()
 
 
 if __name__ == "__main__":
