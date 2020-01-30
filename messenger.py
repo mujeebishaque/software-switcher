@@ -1,6 +1,7 @@
 '''
-module to show custom warnings?, information, errors
+module to show custom warnings, information, errors
 '''
+
 class Messenger:
     
     '''
