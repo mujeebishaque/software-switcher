@@ -9,7 +9,6 @@ class Ui_MainWindow(object):
     def __init__(self):
         self.switcher = Switcher()
 
-
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(742, 371)
@@ -75,11 +74,11 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         # linking buttons to connnects
-        self.start_btn.clicked.connect()
+        self.start_btn.clicked.connect(self.start_application)
         self.exit_btn.clicked.connect(self.exit_application)
         
-        self.check_settings_btn.clicked.connect()
-        self.reports_folder_btn.clicked.connect()
+        self.check_settings_btn.clicked.connect(self.check_settings)
+        self.reports_folder_btn.clicked.connect(self.open_reports_folder)
         # linking ends here
 
         self.retranslateUi(MainWindow)
