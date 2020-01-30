@@ -37,8 +37,8 @@ class Switcher:
         self.fg_window_title     = None
         self.reports_folder_path = None
 
-        self.retrieve_settings()
-        self.starter()
+        # self.retrieve_settings()
+        # self.starter()
 
     def create_settings_file(self):
 

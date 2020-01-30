@@ -74,9 +74,11 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         # linking buttons to connnects
-
+        self.start_btn.clicked.connect()
         self.exit_btn.clicked.connect(self.exit_application)
+        
         self.check_settings_btn.clicked.connect()
+        self.reports_folder_btn.clicked.connect()
         # linking ends here
 
         self.retranslateUi(MainWindow)
@@ -98,6 +100,10 @@ class Ui_MainWindow(object):
 
     def exit_application(self):
         sys.exit()
+
+    def check_settings(self):
+        switcher = Switcher()
+        switcher.retrieve_settings()
 
 
 if __name__ == "__main__":
