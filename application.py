@@ -76,7 +76,7 @@ class Ui_MainWindow(object):
         # linking buttons to connnects
 
         self.exit_btn.clicked.connect(self.exit_application)
-
+        self.check_settings_btn.clicked.connect()
         # linking ends here
 
         self.retranslateUi(MainWindow)

@@ -3,5 +3,7 @@
     "foreground_path": "",
 
     "background_window_title": "",
-    "foreground_window_title": ""
+    "foreground_window_title": "",
+
+    "reports_folder_path": ""
 }
