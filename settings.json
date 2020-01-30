@@ -1,9 +1,9 @@
 {
-    "background_path": "",
-    "foreground_path": "",
+    "background_path": "C:\\Users\\kingzeus\\Desktop\\sesil\\SKI-1000R C\\SKI-1000R C.exe",
+    "foreground_path": "C:\\Program Files (x86)\\Embisphere\\EmbiQCI\\EmbiQCI.exe",
 
-    "background_window_title": "",
-    "foreground_window_title": "",
+    "background_window_title": "SKI-1000R Demo App",
+    "foreground_window_title": "Embi QCI",
 
     "reports_folder_path": ""
 }
