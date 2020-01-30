@@ -122,7 +122,7 @@ selection-background-color: rgb(135, 49, 255);</string>
      <property name="title">
       <string>Functional</string>
      </property>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="start_btn">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -135,7 +135,7 @@ selection-background-color: rgb(135, 49, 255);</string>
        <string>Start</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="exit_btn">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -161,7 +161,7 @@ selection-background-color: rgb(135, 49, 255);</string>
      <property name="title">
       <string>Misc.</string>
      </property>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="check_settings_btn">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -174,7 +174,7 @@ selection-background-color: rgb(135, 49, 255);</string>
        <string>Check Settings</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="reports_folder_btn">
       <property name="geometry">
        <rect>
         <x>40</x>
