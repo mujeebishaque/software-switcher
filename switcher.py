@@ -5,9 +5,7 @@
 '''
 REQUIREMENTS
 ============
-
 => settings.json should have the title of the background and foreground windows in the .json format.
-
 '''
 
 import pygetwindow as gw
@@ -70,9 +68,21 @@ class Switcher:
         self.bg_window_title = settings['background_window_title']
         self.fg_window_title = settings['foreground_window_title']
 
+        if not self.bg_window_title or not self.fg_window_title:
+            Messenger.show_message("Update the settings.json file with window title information", "INFO")
+            return
+
         self.background_window_url = settings['background_path']
         self.foreground_window_url = settings['foreground_path']
+
+        if not self.background_window_url or not self.foreground_window_url:
+            Messenger.show_message("Update the settings.json file with path to application executables", "INFO")
+            return
+
         self.reports_folder_path   = settings['reports_folder_path']
+
+        if not self.reports_folder_path:
+             Messenger.show_message("Recommended: Update the settings.json file with path to reports folder", "INFO")
 
     def starter(self):
         # work with subprocess
