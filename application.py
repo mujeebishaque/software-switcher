@@ -3,6 +3,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from messenger import Messenger
 from switcher import Switcher
 import sys
+import os
 
 class Ui_MainWindow(object):
     
@@ -102,7 +103,7 @@ class Ui_MainWindow(object):
         self.switcher.starter()
 
     def open_reports_folder(self):
-        pass
+        os.system("start " + str(self.switcher.reports_folder_path))
 
     def exit_application(self):
         sys.exit()

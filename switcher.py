@@ -90,11 +90,20 @@ class Switcher:
 
     def is_window_available(self):
         '''
-        check if the window title exists, if not, return False
+        get list of all windows, match them against the titles in settings.json
         '''
         return False
 
     def move_window(self, x_cord, y_cord):
+        '''
+        1 - Move background window to a certain position
+        2 - Call the click_at_coordinate button to click on start button
+        3 - Check if the button texts changes, if yes, minimize window - OPTIONAL
+        4 - shift control to the main window
+        '''
+        pass
+
+    def make_window_active(self, window_title):
         pass
 
     def minimize_window(self, window):
