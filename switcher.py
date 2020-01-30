@@ -15,7 +15,9 @@ from messenger import Messenger
 
 class Switcher:
 
-    SETTINGS_FILE = "settings.json"
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    SETTINGS_FILE = os.path.join(BASE_DIR, "settings.json")
     SETTINGS_CONTENT = '''        
     {
         "background_path": "",
@@ -36,6 +38,9 @@ class Switcher:
     
     reports_folder_path   = None
     
+    def __init__(self):
+        print(self.SETTINGS_FILE)
+
 
     def create_settings_file(self):
 
@@ -53,12 +58,12 @@ class Switcher:
         
 
     def retrieve_settings(self):
-        settings = ""
-
+        
         if os.path.exists(self.SETTINGS_FILE) and os.path.isfile(self.SETTINGS_FILE):
-            if not os.stat().st_size(self.SETTINGS_FILE) == 0:
-                with open(self.SETTINGS_FILE, 'r') as reader:
-                    settings = json.load(reader)
+            # if not os.stat().st_size(self.SETTINGS_FILE) == 0:
+            with open(self.SETTINGS_FILE, 'r') as reader:
+                settings = json.load(reader)
+    
         else:
             self.create_settings_file()
              

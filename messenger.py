@@ -14,7 +14,7 @@ class Messenger:
     WARNING = "WARNING"
 
     @staticmethod
-    def show_message(message, flag=Messenger.DEFAULT):
+    def show_message(message, flag="INFO"):
             # information center
             import tkinter
             from tkinter import messagebox

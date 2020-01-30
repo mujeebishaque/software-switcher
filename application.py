@@ -100,6 +100,7 @@ class Ui_MainWindow(object):
         self.reports_folder_btn.setText(_translate("MainWindow", "Reports Folder"))
 
     def start_application(self):
+        self.check_settings()
         self.switcher.starter()
 
     def open_reports_folder(self):
