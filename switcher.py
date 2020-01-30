@@ -1,4 +1,4 @@
-# Window switcher program, main class definition
+# Window switcher class definition
 # PyGetWindow => import pygetwindow as gw
 # https://pypi.org/project/PyGetWindow/
 
@@ -102,10 +102,3 @@ class Switcher:
 
     def click_at_coordinate(self):
         self.btn_coordinate = "coordinate"
-
-
-if __name__ == '__main__':
-
-    # Switcher.show_message("Something just like this", "INFO")
-    # Switcher.show_message("Not found, I repeat, windows not found", "ERROR")
-    pass
