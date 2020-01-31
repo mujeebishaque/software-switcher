@@ -12,6 +12,7 @@ import pygetwindow as gw
 import json
 import os
 from messenger import Messenger
+import win32gui
 
 class Switcher:
 
@@ -89,9 +90,12 @@ class Switcher:
         import subprocess
 
         subprocess.Popen(f"{ str(self.background_window_url) }")
-        subprocess.Popen(f"{ str(self.foreground_window_url) }")
+        # Open background window i.e. SKI Demo App
+        # Check radio field
+        # Click on ip_field and sendkeys
+        # Click on port_field and sendkeys
+        # subprocess.Popen(f"{ str(self.foreground_window_url) }")
 
-        self.make_window_active(self.bg_window_title)
 
     def is_window_available(self):
         '''
@@ -110,6 +114,11 @@ class Switcher:
 
     def make_window_active(self, window_title):
         # get_window = gw.getWindowsWithTitle(str(window_title))
+        
+        # hwnd = win32gui.FindWindow(None, str(window_title))
+        # # print(hwnd)
+        # win32gui.SetForegroundWindow(hwnd)  # put the window in foreground
+        # win32gui.MoveWindow(hwnd, -7, 0, 500, 500, True)
         pass
 
     def minimize_window(self, window):
