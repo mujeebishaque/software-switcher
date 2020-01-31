@@ -86,16 +86,10 @@ class Switcher:
              Messenger.show_message("Recommended: Update the settings.json file with path to reports folder", "INFO")
 
     def starter(self):
-        # work with subprocess
-        # import subprocess
-        # if it's not working, try to do it serially
-        # subprocess.call([str(self.background_window_url)])
-        # subprocess.call([str(self.foreground_window_url)])
+        import subprocess
 
-        import os
-
-        os.system(f"{ str(self.background_window_url) }")
-        os.system(f"{ str(self.foreground_window_url) }")
+        subprocess.Popen(f"{ str(self.background_window_url) }")
+        subprocess.Popen(f"{ str(self.foreground_window_url) }")
 
     def is_window_available(self):
         '''
