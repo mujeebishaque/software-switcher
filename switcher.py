@@ -13,6 +13,10 @@ import json
 import os
 from messenger import Messenger
 import win32gui
+import subprocess
+import pyautogui
+import time
+
 
 class Switcher:
 
@@ -87,9 +91,15 @@ class Switcher:
              Messenger.show_message("Recommended: Update the settings.json file with path to reports folder", "INFO")
 
     def starter(self):
-        import subprocess
 
         subprocess.Popen(f"{ str(self.background_window_url) }")
+        
+        time.sleep(1)
+        
+        tcp_ip_radio_btn_location = pyautogui.locateOnScreen(os.path.join(self.BASE_DIR, 'tcp_ip.png'))
+        buttonx, buttony = pyautogui.center(tcp_ip_radio_btn_location)
+        pyautogui.click(buttonx, buttony)
+        
         # Open background window i.e. SKI Demo App
         # Check radio field
         # Click on ip_field and sendkeys
