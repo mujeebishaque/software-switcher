@@ -91,6 +91,8 @@ class Switcher:
         subprocess.Popen(f"{ str(self.background_window_url) }")
         subprocess.Popen(f"{ str(self.foreground_window_url) }")
 
+        self.make_window_active(self.bg_window_title)
+
     def is_window_available(self):
         '''
         get list of all windows, match them against the titles in settings.json
@@ -107,6 +109,7 @@ class Switcher:
         pass
 
     def make_window_active(self, window_title):
+        # get_window = gw.getWindowsWithTitle(str(window_title))
         pass
 
     def minimize_window(self, window):
