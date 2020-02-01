@@ -4,3 +4,5 @@ a utility software that opens a background application, clicks on a button and t
 
 
 #### Software Switcher switches control from a background window to a foreground window minimizing the bg window
+
+![Software Interface](https://github.com/mujeebishaque/software-switcher/blob/master/snapshot.png)
