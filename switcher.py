@@ -100,6 +100,13 @@ class Switcher:
         buttonx, buttony = pyautogui.center(tcp_ip_radio_btn_location)
         pyautogui.click(buttonx, buttony)
         
+        ip_field_location = pyautogui.locateOnScreen(os.path.join(self.BASE_DIR, 'ip_input_field.png'))
+        buttonx, buttony = pyautogui.center(ip_field_location)
+        pyautogui.click(buttonx, buttony)
+        pyautogui.hotkey('ctrl', 'a')
+        pyautogui.write('192.168.1.191')
+
+        
         # Open background window i.e. SKI Demo App
         # Check radio field
         # Click on ip_field and sendkeys
