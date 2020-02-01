@@ -1,14 +1,16 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from messenger import Messenger
+from messenger import show_message
 from switcher import Switcher
 import sys
 import os
 
 class Ui_MainWindow(object):
     
+    switcher = Switcher()
+
     def __init__(self):
-        self.switcher = Switcher()
+        self.switcher.retrieve_settings()
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -100,17 +102,16 @@ class Ui_MainWindow(object):
         self.reports_folder_btn.setText(_translate("MainWindow", "Reports Folder"))
 
     def start_application(self):
-        self.check_settings()
         self.switcher.starter()
 
     def open_reports_folder(self):
-        os.system("start " + str(self.switcher.reports_folder_path))
+        self.switcher.check_reports()
 
     def exit_application(self):
         sys.exit()
 
     def check_settings(self):
-        self.switcher.retrieve_settings()
+        self.switcher.check_settings()
 
 
 if __name__ == "__main__":
