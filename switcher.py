@@ -144,3 +144,9 @@ class Switcher:
         BG_Window.minimize()
 
         subprocess.Popen(str(self.foreground_window_url))
+        
+        time.sleep(1)
+
+        inventory_btn_location = pyautogui.locateOnScreen(os.path.join(self.BASE_DIR, 'inventory.png'))
+        buttonx, buttony       = pyautogui.center(inventory_btn_location)
+        pyautogui.click(buttonx, buttony)
