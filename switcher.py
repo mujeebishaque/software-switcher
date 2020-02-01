@@ -92,7 +92,7 @@ class Switcher:
         if not self.reports_folder_path or '' in str(self.reports_folder_path):
             self.has_reports_settings = False
             with open('logs.txt', 'a+') as writer:
-                writer.write(str(datetime.date.today()) + "=> Recommended: Update the settings.json with correct reports folder path")
+                writer.writelines(str(datetime.date.today()) + "=> Recommended: Update the settings.json with correct reports folder path")
 
         self.has_retrieved_settings = True
         
