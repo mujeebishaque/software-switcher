@@ -111,7 +111,14 @@ class Switcher:
         pyautogui.click(buttonx, buttony)
         pyautogui.hotkey('ctrl', 'a')
         pyautogui.write('6001')
+
+        connect_btn_location = pyautogui.locateOnScreen(os.path.join(self.BASE_DIR, 'connect_btn.png'))
+        buttonx, buttony     = pyautogui.center(connect_btn_location)
+        pyautogui.click(buttonx, buttony)
         
+        time.sleep(1)
+
+        pyautogui.press('enter')
         # Open background window i.e. SKI Demo App
         # Check radio field
         # Click on ip_field and sendkeys
