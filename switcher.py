@@ -106,6 +106,11 @@ class Switcher:
         pyautogui.hotkey('ctrl', 'a')
         pyautogui.write('192.168.1.191')
 
+        port_location = pyautogui.locateOnScreen(os.path.join(self.BASE_DIR, 'port_field.png'))
+        buttonx, buttony = pyautogui.center(port_location)
+        pyautogui.click(buttonx, buttony)
+        pyautogui.hotkey('ctrl', 'a')
+        pyautogui.write('6001')
         
         # Open background window i.e. SKI Demo App
         # Check radio field
