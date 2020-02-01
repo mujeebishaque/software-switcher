@@ -142,3 +142,5 @@ class Switcher:
         
         BG_Window = gw.getWindowsWithTitle(str(self.bg_window_title))[0]
         BG_Window.minimize()
+
+        subprocess.Popen(str(self.foreground_window_url))
