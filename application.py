@@ -12,6 +12,7 @@ class Ui_MainWindow(object):
     def __init__(self):
         self.switcher.retrieve_settings()
 
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(742, 371)
@@ -25,6 +26,9 @@ class Ui_MainWindow(object):
         self.logo.setObjectName("logo")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(230, 20, 220, 31))
+
+        MainWindow.setWindowIcon(QtGui.QIcon('logo.png'))
+
         font = QtGui.QFont()
         font.setFamily("Verdana")
         font.setPointSize(16)
