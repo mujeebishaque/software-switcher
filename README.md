@@ -15,3 +15,5 @@ Background software is the one from whom you want to shift control to the other 
 
 This software opens background software first, clicks on few buttons, enters some text into fields and then minimizes the background window and opens the foreground window.
 --
+
+> The software doesn't work on windows 7. Tested successfully on windows 10.
